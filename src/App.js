@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import Root from './components/Main/Root';
+import Register from './components/Register/Register';
 import Services from './components/Services/Services';
 
 function App() {
@@ -14,18 +16,30 @@ function App() {
         {
           path: "/",
           element: <Home></Home>,
+          loader: () => {
+            return fetch("data.json");
+          },
         },
         {
           path: "home",
           element: <Home></Home>,
-          loader: () =>{
-            return fetch('data.json');
-          }
+          loader: () => {
+            return fetch("data.json");
+          },
         },
         {
           path: "services",
-          element: <Services></Services>
+          element: <Services></Services>,
         },
+        {
+          path: "login",
+          element: <Login></Login>,
+        },
+        {
+          path: "signup",
+          element: <Register></Register>
+        
+        }
       ],
     },
   ]);
