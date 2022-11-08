@@ -18,6 +18,9 @@ function App() {
         {
           path: "home",
           element: <Home></Home>,
+          loader: () =>{
+            return fetch('data.json');
+          }
         },
         {
           path: "services",

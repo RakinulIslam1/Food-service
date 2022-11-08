@@ -48,7 +48,7 @@ export const Header = () => {
             class="inline-flex items-center lg:mx-auto"
           >
             <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-              Online Services
+              Online Food Services
             </span>
           </Link>
           <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
@@ -107,7 +107,7 @@ export const Header = () => {
                         class="inline-flex items-center"
                       >
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Online Services
+                          Online Food Services
                         </span>
                       </Link>
                     </div>
@@ -159,7 +159,7 @@ export const Header = () => {
                           Pricing
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
                           to="/"
                           aria-label="Sign in"
@@ -168,17 +168,17 @@ export const Header = () => {
                         >
                           Sign in
                         </Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link
                           to="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                           aria-label="Sign up"
                           title="Sign up"
                         >
                           Sign up
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </nav>
                 </div>
