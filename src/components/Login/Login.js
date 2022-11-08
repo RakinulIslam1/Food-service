@@ -1,12 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
+import Swal from "sweetalert2";
 
 const Login = () => {
+    const { logIn } = useContext(AuthContext);
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+
+    const handleLogin = (e) =>{
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        logIn(email, password)
+          .then((result) => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+            Swal.fire("Good job!", "You have succesfully loged in!", "success");
+            navigate('/')
+          })
+          .catch((err) => {
+            console.error(err);
+            const errorMessage = err.message;
+            setError(errorMessage);
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: (error),
+            });
+            
+          });
+    }
+
+
     return (
-      <div className='text-start'>
+      <div className="text-start">
         <div className="w-96 my-10 mx-auto p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
           <h1 className="text-2xl font-bold text-center">Login</h1>
           <form
+            onSubmit={handleLogin}
             novalidate=""
             action=""
             className="space-y-6 ng-untouched ng-pristine ng-valid"
@@ -20,8 +55,8 @@ const Login = () => {
                 name="email"
                 id=""
                 placeholder="Enter your email"
-                required
                 className="w-full px-4 py-3 rounded-md dark:border-gray-700 bg-white text-black"
+                required
               />
             </div>
             <div className="space-y-1 text-sm">
@@ -33,8 +68,8 @@ const Login = () => {
                 name="password"
                 id=""
                 placeholder="Enter your password"
-                required
                 className="w-full px-4 py-3 rounded-md dark:border-gray-700 bg-white text-black"
+                required
               />
             </div>
             <button className="block w-32 mx-auto  p-3 text-center rounded-lg dark:text-gray-900 dark:bg-violet-400">

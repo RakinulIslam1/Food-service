@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
 
 export const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLogout = () =>{
+    logOut()
+    .then( () =>{})
+    .catch(err => console.error(err))
+  }
 
   return (
     <div class="bg-gray-900 md:rounded-lg nav">
@@ -51,27 +59,18 @@ export const Header = () => {
               Online Food Services
             </span>
           </Link>
-          <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-            <li>
-              <Link
-                to="/login"
-                aria-label="Sign in"
-                title="Sign in"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-              >
-                Login
+          <ul class="flex items-center hidden ml-auto space-x-8 lg:flex text-white">
+            {user?.email ? 
+              <>
+                <p>{user?.displayName}</p>
+                <img src={user?.photoURL} alt="" />
+                <button onClick={handleLogout}>LogOut</button>
+              </>
+             : 
+              <Link to="/login">
+                <button>Login</button>
               </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
-              >
-                Sign up
-              </Link>
-            </li>
+            }
           </ul>
           <div class="ml-auto lg:hidden">
             <button

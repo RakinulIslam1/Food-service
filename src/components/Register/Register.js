@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
+import Swal from "sweetalert2";
 
 const Register = () => {
     const { createUser, userProfile } = useContext(AuthContext);
     const [error, setError] =useState('')
+    
 
     const handleSubmite = e =>{
         e.preventDefault()
@@ -22,14 +24,18 @@ const Register = () => {
             setError('')
             form.reset();
             updateProfile(name, photoURL)
+            Swal.fire("Good job!", "You have succesfully sign in!", "success");
         })
         .catch(err => {
             console.error(err);
-            const errorMessage = error.message;
+            const errorMessage = err.message;
             setError(errorMessage)
-            
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: error,
+            });
         });
-
     }
      const updateProfile = (name, photoURL) => {
        const profile = {
