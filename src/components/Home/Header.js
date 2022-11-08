@@ -60,17 +60,17 @@ export const Header = () => {
             </span>
           </Link>
           <ul class="flex items-center hidden ml-auto space-x-8 lg:flex text-white">
-            {user?.email ? 
+            {user?.email ? (
               <>
-                <p>{user?.displayName}</p>
                 <img src={user?.photoURL} alt="" />
+                <p>{user?.displayName}</p>
                 <button onClick={handleLogout}>LogOut</button>
               </>
-             : 
+            ) : (
               <Link to="/login">
                 <button>Login</button>
               </Link>
-            }
+            )}
           </ul>
           <div class="ml-auto lg:hidden">
             <button

@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from "sweetalert2";
 
 const Register = () => {
-    const { createUser, userProfile } = useContext(AuthContext);
+    const { createUser, userProfile, logOut } = useContext(AuthContext);
     const [error, setError] =useState('')
-    
+    const navigate = useNavigate();
+
 
     const handleSubmite = e =>{
         e.preventDefault()
@@ -25,6 +26,8 @@ const Register = () => {
             form.reset();
             updateProfile(name, photoURL)
             Swal.fire("Good job!", "You have succesfully sign in!", "success");
+            logOut();
+            navigate('/login')
         })
         .catch(err => {
             console.error(err);
