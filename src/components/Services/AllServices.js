@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllServices = ({srv}) => {
-    const { title, image, description, price } = srv;
+    const {_id, title, image, description, price } = srv;
 
 
     return (
@@ -15,7 +16,9 @@ const AllServices = ({srv}) => {
             <p className="text-start text-xl">{description.slice(0, 100)}...</p>
             <p className="text-start text-xl">${price}</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">View details</button>
+              <Link to={`/details/${_id}`}>
+                <button className="btn btn-primary">View details</button>
+              </Link>
             </div>
           </div>
         </div>

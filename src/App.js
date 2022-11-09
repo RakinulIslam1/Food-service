@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import DetailsPage from './components/DetailsPage/DetailsPage';
 import Error from './components/Error/Error';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -32,9 +33,9 @@ function App() {
         {
           path: "services",
           element: <Services></Services>,
-          loader: () =>{
+          loader: () => {
             return fetch("http://localhost:5000/services");
-          }
+          },
         },
         {
           path: "login",
@@ -43,6 +44,12 @@ function App() {
         {
           path: "signup",
           element: <Register></Register>,
+        },
+        {
+          path: "/details/:id",
+          element: <DetailsPage></DetailsPage>,
+          loader: ({ params }) =>
+            fetch(`http://localhost:5000/services/${params.id}`),
         },
       ],
     },
