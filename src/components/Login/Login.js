@@ -26,7 +26,7 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             form.reset();
-            Swal.fire("Good job!", "You have succesfully loged in!", "success");
+            Swal.fire("Good job!", "You have succesfully logged in!", "success");
             // navigate('/')
             navigate(from, {replace: true});
           })
@@ -47,6 +47,7 @@ const Login = () => {
       .then( result =>{
         const user = result.user;
         // navigate('/')
+        Swal.fire("Good job!", "You have succesfully logged in!", "success");
         navigate(from, { replace: true });
         console.log(user);
       })
@@ -56,6 +57,7 @@ const Login = () => {
       gitHub(gitProvider)
         .then((result) => {
           const user = result.user;
+          Swal.fire("Good job!", "You have succesfully logged in!", "success");
           navigate(from, { replace: true });
           console.log(user);
         })
