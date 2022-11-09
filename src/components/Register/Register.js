@@ -2,11 +2,13 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from "sweetalert2";
+import useTitle from '../hooks/useTitle';
 
 const Register = () => {
     const { createUser, userProfile, logOut } = useContext(AuthContext);
     const [error, setError] =useState('')
     const navigate = useNavigate();
+    useTitle('SignUp');
 
 
     const handleSubmite = e =>{

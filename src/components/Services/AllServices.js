@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
 const AllServices = ({srv}) => {
     const {_id, title, image, description, price } = srv;
-
+    useTitle('Services')
     return (
       <div>
         <div className="card mx-auto card-compact w-96 bg-gray-900 shadow-xl text-white">

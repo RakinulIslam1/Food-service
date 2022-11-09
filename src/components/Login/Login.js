@@ -3,12 +3,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from "sweetalert2";
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../hooks/useTitle';
 
 const Login = () => {
     const { logIn, goggle, gitHub } = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Login');
 
     const from = location.state?.from?.pathname || '/';
 

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import img from '../Home/3683230.jpg'
+import useTitle from '../hooks/useTitle';
 import HomeServices from './HomeServices';
 
 
 const Home = () => {
     const data = useLoaderData();
+    useTitle('Home')
     // console.log(data);
     return (
       <div>
