@@ -6,6 +6,7 @@ import Error from './components/Error/Error';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Root from './components/Main/Root';
+import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
 import Register from './components/Register/Register';
 import Services from './components/Services/Services';
 
@@ -53,9 +54,13 @@ function App() {
             fetch(`http://localhost:5000/services/${params.id}`),
         },
         {
-          path: 'blog',
-          element: <Blog></Blog>
-        }
+          path: "blog",
+          element: (
+            <PrivateRoutes>
+              <Blog></Blog>
+            </PrivateRoutes>
+          ),
+        },
       ],
     },
   ]);

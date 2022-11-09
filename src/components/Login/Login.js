@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from "sweetalert2";
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
@@ -8,10 +8,13 @@ const Login = () => {
     const { logIn, goggle, gitHub } = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+
     const googleProvider = new GoogleAuthProvider();
     const gitProvider = new GithubAuthProvider()
     
-
     const handleLogin = (e) =>{
         e.preventDefault();
         const form = e.target;
@@ -24,7 +27,8 @@ const Login = () => {
             console.log(user);
             form.reset();
             Swal.fire("Good job!", "You have succesfully loged in!", "success");
-            navigate('/')
+            // navigate('/')
+            navigate(from, {replace: true});
           })
           .catch((err) => {
             console.error(err);
@@ -42,7 +46,8 @@ const Login = () => {
       goggle(googleProvider)
       .then( result =>{
         const user = result.user;
-        navigate('/')
+        // navigate('/')
+        navigate(from, { replace: true });
         console.log(user);
       })
       .catch(err => console.error(err));
@@ -51,6 +56,7 @@ const Login = () => {
       gitHub(gitProvider)
         .then((result) => {
           const user = result.user;
+          navigate(from, { replace: true });
           console.log(user);
         })
         .catch((err) => console.error(err));

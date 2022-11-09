@@ -16,7 +16,9 @@ const AllServices = ({srv}) => {
             <p className="text-start text-xl">${price}</p>
             <div className="card-actions justify-end">
               <Link to={`/details/${_id}`}>
-                <button className="btn btn-primary">View details</button>
+                <button className="btn btn-primary font-semibold">
+                  View details
+                </button>
               </Link>
             </div>
           </div>
