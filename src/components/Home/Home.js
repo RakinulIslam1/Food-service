@@ -12,7 +12,7 @@ const Home = () => {
         <div className="grid md:grid-cols-2 items-center mb-5">
           <div>
             <h2 className="text-3xl font-bold mb-2 mt-5 text-blue-600">
-              ❝ Delivery Service ❞
+              ❝Be Honest and keep Servicing ❞
             </h2>
             <p className="text-xl font-semibold mb-3">
               "To earn the respect (and eventually love) of your customers, you
@@ -25,12 +25,17 @@ const Home = () => {
           </div>
         </div>
         <div>
-            {
-                data.map( service => <HomeServices
-                key={service.id}
-                service={service}
-                ></HomeServices>)
-            }
+          <h2 className="text-5xl font-bold text-blue-600 mb-7 underline">
+            Here you can enjoy our meals :)
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+          {data.map((service) => (
+            <HomeServices key={service._id} service={service}></HomeServices>
+          ))}
+        </div>
+        <div>
+          <button className='btn btn-ghost'>See All</button>
         </div>
       </div>
     );

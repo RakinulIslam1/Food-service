@@ -1,6 +1,5 @@
 [
   {
-    "id" : 1,
     "title": "Rigatoni pasta",
     "price": 109.95,
     "description": "pasta, any of several starchy food preparations (pasta alimentaria) frequently associated with Italian cuisine and made from semolina, the granular product obtained from the endosperm of a type of wheat called durum, and containing a large proportion of gluten (elastic protein). Rigatoni, which comes from the word “rigato” meaning ridged, are short, wide tubes of pasta that have ridges on the outside, but are smooth on the inside. Rigatoni are perfect for big chunkier sauces as their ridges and wide center help capture the sauce perfectly.",
@@ -9,7 +8,6 @@
 
   },
   {
-    "id" : 2,
     "title": "Cheese pizza",
     "price": 22.3,
     "description": "Pizza is one of the most popular foods in the world, and for good reason! It's affordable, delicious, and there's an option for everyone. And it's not just popular in pizza parlors. It's popular in Instagram too! Did you know that pizza has been used on over 40 million posts? For some perspective, sushi has under 25 million, burger has less than 15 million, and tacos has under 8 million. Pizza is clearly one of the most beloved foods on Instagram. It photographs well and there it can be made in infinite varieties. But don't just depend on those beauty shots or slow-mo cheese pulls to get attention to your Instagram posts. You need a snappy caption to go with that gooey goodness. I know it can get tedious, trying to think of something clever to say on every single post. So here is a list of 97 pizza captions for Instagram, all about the perfect pie!. pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature",
@@ -18,16 +16,14 @@
 
   },
   {
-    "id" : 3,
     "title": "Hamburger burger",
     "price": 55.99,
     "description": "The best burgers offer a combination of tastes and textures sweet, sour, salt with a bit of crunch. The patty needs to be juicy, the bun soft but sturdy, and you want the meat/bun/accompaniment ratio to be even from first to last bite.Consumers also used adjectives like “smothered,” “loaded,” “simple,” and “fixings” to describe their burger preferences. Some direct consumer responses highlight all these findings below: Juicy, big, loaded with toppings of my choice. Protein is an important nutrient, but burgers offer way more than that. Whenever you eat a burger, you'll also give your body B-vitamins, iron, zinc, niacin, and other vitamins and minerals.",
 
-    "image": "https://img.freepik.com/free-photo/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon_2829-5398.jpg?w=740&t=st=1667897215~exp=1667897815~hmac=83e42666c7c49c92d696984821e598a65daa88c6d8830fa97a0dc425bc46d043.jpg"
+    "image": "https://img.freepik.com/free-photo/front-view-tasty-meat-burger-with-cheese-salad-dark-background_140725-89597.jpg?size=626&ext=jpg&ga=GA1.2.1861700233.1658944325&semt=sph.jpg"
 
   },
   {
-    "id" : 4,
     "title": "Egg noodle",
     "price": 15.99,
     "description": "Egg noodles are a significant source of a number of vitamins and minerals, but are an especially good source of many of the B vitamins, including riboflavin, thiamine, folate and niacin, meeting more than 10 percent of the daily value. A type of flat pasta that differs from regular flour and water pasta in that eggs are added to enrich the dough. Several different widths are produced commercially and the noodles are available fresh or dried. They are most often used in soups and casseroles. Benefits. Egg noodles' nutritional content is similar to that of regular pasta but slightly lower in calories, carbs, and protein. They're also often enriched, meaning that certain vitamins and minerals have been added, increasing their nutritional value",
@@ -36,7 +32,6 @@
 
   },
   {
-    "id" : 5,
     "title": "Chicken biryani",
     "price": 695,
     "description": "Chicken Biryani is a savory chicken and rice dish that includes layers of chicken, rice, and aromatics that are steamed together. The bottom layer of rice absorbs all the chicken juices as it cooks, giving it a tender texture and rich flavor, while the top layer of rice turns out white and fluffy. Simply put, biryani is a spiced mix of meat and rice, traditionally cooked over an open fire in a leather pot. It is combined in different ways with a variety of components to create a number of highly tasty and unique flavor combinations. Originally from Persia, and introduced in India by Mughal rulers, the dish is a delight to eat and a challenge for chefs to prepare. In a perfect pot of biryani, every grain of rice is separate, yet infused with aromas of various spices and has meat or vegetables paired with it.",
@@ -45,11 +40,10 @@
 
   },
   {
-    "id" : 6,
     "title": "Fried fish carp",
     "price": 168,
     "description": "Fried fish is any fish or shellfish that has been prepared by frying. Often, the fish is covered in batter, egg and breadcrumbs, flour, or herbs and spices before being fried and served, often with a slice of lemon. Fish is fried in many parts of the world, and fried fish is an important food in many cuisines. For many cultures, fried fish is historically derived from pescado frito, and the traditional fish and chips dish of England which it may have inspired. The latter remains a staple take-out dish of the UK and its former and present colonies. Fried fishcakes made of cod (and other white fish, such as haddock, halibut or whiting) are a widely available in the frozen food sections of U.S. grocery stores. Long John Silver's, Skipper's, Captain D's, and Arthur Treacher's are well-known North American chain restaurants that serve fried fish as their main food offering. Catfish are also a prevalent farm-raised type of fish that is often served fried throughout the world. A classic fried fish recipe from France is the Sole meunière.",
     
-    "image": "https://img.freepik.com/free-photo/fried-fish-carp-fresh-vegetable-salad-wooden-table_2829-19923.jpg?w=740&t=st=1667898057~exp=1667898657~hmac=90ee25f05938026d81e63e45933fc2a80d93c49e93a6fe343f5ec6025e00e108.jpg"
+    "image": "https://img.freepik.com/premium-photo/dorada-grilled-plate-with-vegetables_252187-234.jpg?size=626&ext=jpg&ga=GA1.2.1861700233.1658944325&semt=sph.jpg"
   }
 ]

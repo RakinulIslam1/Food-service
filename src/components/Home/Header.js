@@ -45,7 +45,7 @@ export const Header = () => {
                 title="Product pricing"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Pricing
+                Blog
               </Link>
             </li>
           </ul>
@@ -56,7 +56,7 @@ export const Header = () => {
             class="inline-flex items-center lg:mx-auto"
           >
             <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-              Online Food Services
+              We Serve Healthy Foods
             </span>
           </Link>
           <ul class="flex items-center hidden ml-auto space-x-8 lg:flex text-white">
@@ -106,7 +106,7 @@ export const Header = () => {
                         class="inline-flex items-center"
                       >
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Online Food Services
+                          We Serve Healthy Foods
                         </span>
                       </Link>
                     </div>
@@ -155,7 +155,7 @@ export const Header = () => {
                           title="Product pricing"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          Pricing
+                          Blog
                         </Link>
                       </li>
 
