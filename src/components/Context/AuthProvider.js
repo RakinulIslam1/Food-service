@@ -28,6 +28,9 @@ const AuthProvider = ({children}) => {
     const goggle = (provider) =>{
         return signInWithPopup(auth, provider);
     }
+    const gitHub = (provider) =>{
+        return signInWithPopup(auth, provider);
+    }
 
     useEffect( () =>{
         const unSubscribe = onAuthStateChanged(auth, currentUser =>{
@@ -46,6 +49,7 @@ const AuthProvider = ({children}) => {
       logIn,
       logOut,
       goggle,
+      gitHub,
     };
     return (
         <AuthContext.Provider value={authInfo}>

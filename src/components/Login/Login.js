@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from "sweetalert2";
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const { logIn, goggle } = useContext(AuthContext);
+    const { logIn, goggle, gitHub } = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate();
-    const googleProvider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider();
+    const gitProvider = new GithubAuthProvider()
     
 
     const handleLogin = (e) =>{
@@ -44,6 +45,14 @@ const Login = () => {
         console.log(user);
       })
       .catch(err => console.error(err));
+    }
+    const handleGithub = () =>{
+      gitHub(gitProvider)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+        })
+        .catch((err) => console.error(err));
     }
 
 
@@ -105,7 +114,7 @@ const Login = () => {
               </svg>
             </button>
 
-            <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+            <button onClick={handleGithub} aria-label="Log in with GitHub" className="p-3 rounded-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
