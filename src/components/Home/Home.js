@@ -6,7 +6,7 @@ import HomeServices from './HomeServices';
 
 const Home = () => {
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
     return (
       <div>
         <div className="grid md:grid-cols-2 items-center mb-5">

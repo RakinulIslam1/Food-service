@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const AllServices = ({srv}) => {
     const {_id, title, image, description, price } = srv;
 
-
     return (
       <div>
         <div className="card card-compact w-96 bg-gray-900 shadow-xl text-white">
