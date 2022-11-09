@@ -12,7 +12,7 @@ const Home = () => {
         <div className="grid md:grid-cols-2 items-center mb-5">
           <div>
             <h2 className="text-3xl font-bold mb-2 mt-5 text-blue-600">
-              ❝Be Honest and keep Servicing ❞
+              ❝ Be Honest and keep Servicing ❞
             </h2>
             <p className="text-xl font-semibold mb-3">
               "To earn the respect (and eventually love) of your customers, you

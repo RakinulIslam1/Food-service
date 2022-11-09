@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blog from './components/Blog/Blog';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 import Error from './components/Error/Error';
 import Home from './components/Home/Home';
@@ -51,6 +52,10 @@ function App() {
           loader: ({ params }) =>
             fetch(`http://localhost:5000/services/${params.id}`),
         },
+        {
+          path: 'blog',
+          element: <Blog></Blog>
+        }
       ],
     },
   ]);
