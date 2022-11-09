@@ -62,7 +62,7 @@ export const Header = () => {
           <ul class="flex items-center hidden ml-auto space-x-8 lg:flex text-white">
             {user?.email ? (
               <>
-                <img src={user?.photoURL} alt="" />
+                <img className="w-10 rounded-lg" src={user?.photoURL} alt="" />
                 <p>{user?.displayName}</p>
                 <button onClick={handleLogout}>LogOut</button>
               </>
@@ -158,26 +158,24 @@ export const Header = () => {
                           Pricing
                         </Link>
                       </li>
-                      {/* <li>
-                        <Link
-                          to="/"
-                          aria-label="Sign in"
-                          title="Sign in"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Sign in
-                        </Link>
-                      </li> */}
-                      {/* <li>
-                        <Link
-                          to="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
-                        </Link>
-                      </li> */}
+
+                      <ul class="flex items-center ml-auto space-x-8 lg:flex">
+                        {user?.email ? (
+                          <>
+                            <img
+                              className="w-10 rounded-lg"
+                              src={user?.photoURL}
+                              alt=""
+                            />
+                            <p>{user?.displayName}</p>
+                            <button onClick={handleLogout}>LogOut</button>
+                          </>
+                        ) : (
+                          <Link to="/login">
+                            <button>Login</button>
+                          </Link>
+                        )}
+                      </ul>
                     </ul>
                   </nav>
                 </div>
