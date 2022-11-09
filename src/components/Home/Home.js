@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import img from '../Home/3683230.jpg'
 import HomeServices from './HomeServices';
 
@@ -35,7 +35,9 @@ const Home = () => {
           ))}
         </div>
         <div>
-          <button className='btn btn-ghost'>See All</button>
+          <Link to="/services">
+            <button className="btn rounded-lg mb-5 text-xl bg-gray-900 text-white">See All Services</button>
+          </Link>
         </div>
       </div>
     );

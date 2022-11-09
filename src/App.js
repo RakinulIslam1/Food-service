@@ -19,19 +19,22 @@ function App() {
           path: "/",
           element: <Home></Home>,
           loader: () => {
-            return fetch("http://localhost:5000/services");
+            return fetch("http://localhost:5000/service");
           },
         },
         {
           path: "home",
           element: <Home></Home>,
           loader: () => {
-            return fetch("http://localhost:5000/services");
+            return fetch("http://localhost:5000/service");
           },
         },
         {
           path: "services",
           element: <Services></Services>,
+          loader: () =>{
+            return fetch("http://localhost:5000/services");
+          }
         },
         {
           path: "login",

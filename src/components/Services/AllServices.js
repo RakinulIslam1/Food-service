@@ -1,7 +1,9 @@
 import React from 'react';
 
-const HomeServices = ({service}) => {
-    const { title, image, description, price } = service;
+const AllServices = ({srv}) => {
+    const { title, image, description, price } = srv;
+
+
     return (
       <div>
         <div className="card card-compact w-96 bg-gray-900 shadow-xl text-white">
@@ -21,4 +23,4 @@ const HomeServices = ({service}) => {
     );
 };
 
-export default HomeServices;
+export default AllServices;
