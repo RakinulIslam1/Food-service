@@ -49,17 +49,17 @@ function App() {
         },
         {
           path: "/details/:id",
-          element: <DetailsPage></DetailsPage>,
+          element: (
+            <PrivateRoutes>
+              <DetailsPage></DetailsPage>
+            </PrivateRoutes>
+          ),
           loader: ({ params }) =>
             fetch(`http://localhost:5000/services/${params.id}`),
         },
         {
           path: "blog",
-          element: (
-            <PrivateRoutes>
-              <Blog></Blog>
-            </PrivateRoutes>
-          ),
+          element:<Blog></Blog>,
         },
       ],
     },

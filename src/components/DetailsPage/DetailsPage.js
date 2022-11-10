@@ -5,7 +5,7 @@ import useTitle from '../hooks/useTitle';
 const DetailsPage = () => {
     const service = useLoaderData();
     useTitle('Details')
-    console.log(service);
+    // console.log(service);
     const { title, image, description } = service;
     return (
       <div>

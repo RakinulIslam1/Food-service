@@ -6,10 +6,9 @@ import useTitle from '../hooks/useTitle';
 
 const Register = () => {
     const { createUser, userProfile, logOut } = useContext(AuthContext);
-    const [error, setError] =useState('')
+    const [error, setError] =useState('');
     const navigate = useNavigate();
     useTitle('SignUp');
-
 
     const handleSubmite = e =>{
         e.preventDefault()

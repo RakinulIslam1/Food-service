@@ -4,7 +4,6 @@ import img from '../Home/3683230.jpg'
 import useTitle from '../hooks/useTitle';
 import HomeServices from './HomeServices';
 
-
 const Home = () => {
     const data = useLoaderData();
     useTitle('Home')
@@ -27,6 +26,15 @@ const Home = () => {
           </div>
         </div>
         <div>
+          <h2 className='text-2xl font-semibold my-16'>
+            A healthy diet is essential for good health and nutrition. It
+            protects you against <br /> many chronic noncommunicable diseases, such as
+            heart disease,<br /> diabetes and cancer. Eating a variety of foods and
+            consuming less salt, <br /> sugars and saturated and industrially-produced
+            trans-fats,<br /> are essential for healthy diet.
+          </h2>
+        </div>
+        <div>
           <h2 className="text-4xl font-bold text-blue-600 mb-8 underline">
             Here you can enjoy our meals :)
           </h2>
@@ -38,7 +46,9 @@ const Home = () => {
         </div>
         <div>
           <Link to="/services">
-            <button className="btn rounded-lg mb-5 text-xl bg-gray-900 text-white">See All Services</button>
+            <button className="btn rounded-lg mb-5 text-xl bg-gray-900 text-white">
+              See All Services
+            </button>
           </Link>
         </div>
       </div>
