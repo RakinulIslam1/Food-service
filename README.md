@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+### Here is some details about my Website
+- I give a name of my site is freshiii
+- I use lot's of features here like authenications, routing with out reloading the page
+- First of all i used react js for to create this website
+- I applied tailwild as a css framwork
+- As i used tailwind here that's why i used to tailwind components like daisyui and Mambaui
+- [My website live link](https://assignment-eleventh.web.app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
