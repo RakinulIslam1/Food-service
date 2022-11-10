@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import Root from './components/Main/Root';
 import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes';
 import Register from './components/Register/Register';
+import Reviwes from './components/Reviwes/Reviwes';
 import Services from './components/Services/Services';
 
 function App() {
@@ -49,17 +50,24 @@ function App() {
         },
         {
           path: "/details/:id",
-          element: (
-            <PrivateRoutes>
-              <DetailsPage></DetailsPage>
-            </PrivateRoutes>
-          ),
+          element: <DetailsPage></DetailsPage>,
           loader: ({ params }) =>
             fetch(`http://localhost:5000/services/${params.id}`),
         },
         {
           path: "blog",
-          element:<Blog></Blog>,
+          element: <Blog></Blog>,
+        },
+        {
+          path: "review",
+          element: (
+            <PrivateRoutes>
+              <Reviwes></Reviwes>
+            </PrivateRoutes>
+          ),
+          loader: () => {
+            return fetch("http://localhost:5000/services");
+          },
         },
       ],
     },

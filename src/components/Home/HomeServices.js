@@ -10,7 +10,7 @@ const HomeServices = ({service}) => {
         <div>
           <div className="card mx-auto card-compact w-96 bg-gray-900 shadow-xl text-white">
             <PhotoView src={image}>
-              <img src={image} alt="Shoes" />
+              <img className='rounded-t-2xl' src={image} alt="Shoes" />
             </PhotoView>
             <div className="card-body">
               <h2 className="card-title text-2xl">{title}</h2>

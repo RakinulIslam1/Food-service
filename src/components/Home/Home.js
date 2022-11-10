@@ -36,7 +36,7 @@ const Home = () => {
         </div>
         <div>
           <h2 className="text-4xl font-bold text-blue-600 mb-8 underline">
-            Here you can enjoy our meals :)
+            Here you can enjoy my services :)
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
@@ -47,7 +47,7 @@ const Home = () => {
         <div>
           <Link to="/services">
             <button className="btn rounded-lg mb-5 text-xl bg-gray-900 text-white">
-              See All Services
+              See All
             </button>
           </Link>
         </div>

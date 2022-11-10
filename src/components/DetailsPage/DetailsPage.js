@@ -1,12 +1,12 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
 
 const DetailsPage = () => {
     const service = useLoaderData();
     useTitle('Details')
     // console.log(service);
-    const { title, image, description } = service;
+    const { title, image, description, price } = service;
     return (
       <div>
         <div>
@@ -16,14 +16,18 @@ const DetailsPage = () => {
             </figure>
             <div className="card-body">
               <h2 className="card-title text-2xl">{title}</h2>
-              <p className="text-start text-xl">
-                {description}
-              </p>
-              {/* <div className="card-actions justify-end">
-                <Link to={`/details/${_id}`}>
-                  <button className="btn btn-primary">View details</button>
+              <p className="text-start text-xl">{description}</p>
+              <p className="text-start text-xl">Price ${price}</p>
+              <div className="flex justify-evenly">
+                <button className="bg-white text-black p-2 rounded-lg font-semibold hover:bg-black hover:text-white text-1xl">
+                  Request for Service
+                </button>
+                <Link to='/review'>
+                  <button className="bg-white text-black p-2 rounded-lg font-semibold hover:bg-black hover:text-white text-1xl">
+                    Give us Reviews
+                  </button>
                 </Link>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

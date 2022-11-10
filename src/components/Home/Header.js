@@ -65,6 +65,7 @@ export const Header = () => {
                 <img className="w-10 rounded-lg" src={user?.photoURL} alt="" />
                 <p>{user?.displayName}</p>
                 <button onClick={handleLogout}>LogOut</button>
+                <button>Reviews</button>
               </>
             ) : (
               <Link to="/login">
