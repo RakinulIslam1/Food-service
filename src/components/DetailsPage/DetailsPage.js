@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthProvider';
 import useTitle from '../hooks/useTitle';
 
 const DetailsPage = () => {
     const service = useLoaderData();
+    const {user} =useContext(AuthContext);
     useTitle('Details')
     // console.log(service);
     const { title, image, description, price } = service;
@@ -23,9 +25,15 @@ const DetailsPage = () => {
                   Request for Service
                 </button>
                 <Link to='/review'>
+                  {user?.email?
                   <button className="bg-white text-black p-2 rounded-lg font-semibold hover:bg-black hover:text-white text-1xl">
                     Give us Reviews
                   </button>
+                  :
+                  <button className="bg-white text-black p-2 rounded-lg font-semibold hover:bg-black hover:text-white text-1xl">
+                    login to Give Review
+                  </button>
+                  }
                 </Link>
               </div>
             </div>

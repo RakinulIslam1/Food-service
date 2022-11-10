@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import useTitle from "../hooks/useTitle";
+import Swal from "sweetalert2";
 
 const Reviwes = () => {
     useTitle('Reviews');
@@ -21,10 +22,31 @@ const Reviwes = () => {
             service: _id,
             serviceName: title,
             email,
-            name,
+            customer: name,
             photoURL,
             msg
         }
+
+        fetch("http://localhost:5000/orders", {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(review)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged){
+                Swal.fire(
+                  "Good job!",
+                  "Such a nice review",
+                  "success"
+                );
+                form.reset();
+            }
+        })
+        .catch(err => console.error(err))
     }
 
   return (
